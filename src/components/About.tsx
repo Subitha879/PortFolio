@@ -145,7 +145,7 @@ const About: React.FC = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-3">Languages</h4>
               <div className="flex space-x-4">
-                {['English', 'Tamil', 'Malayalam'].map((lang, index) => (
+                {['English', 'Tamil'].map((lang, index) => (
                   <span
                     key={index}
                     className="px-3 py-1 bg-cyan-400/10 text-cyan-400 rounded-full text-sm hover:bg-cyan-400/20 transition-colors duration-300"

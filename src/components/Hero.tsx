@@ -157,8 +157,85 @@
 // export default Hero;
 
 
+// import React from 'react';
+// import { ArrowDown, Download, Mail, Phone, MapPin } from 'lucide-react';
+
+// const Hero: React.FC = () => {
+//   const scrollToSection = (sectionId: string) => {
+//     const element = document.getElementById(sectionId);
+//     if (element) {
+//       element.scrollIntoView({ behavior: 'smooth' });
+//     }
+//   };
+
+//   return (
+//     <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+//       <div className="absolute inset-0">
+//         <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+//         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+//       </div>
+
+//       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+//         <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-4 tracking-tight">
+//           SUBITHA.T
+//         </h1>
+        
+//         <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-200">
+//           Full Stack Developer (MERN)
+//         </p>
+
+//         <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in delay-300">
+//           Passionate about crafting innovative solutions with over a year of experience 
+//           delivering high-quality web applications using modern technologies.
+//         </p>
+
+//         <div className="flex flex-wrap justify-center gap-6 mb-12 animate-fade-in delay-400">
+//           {[
+//             { icon: <Phone size={18} />, text: '9345543139' },
+//             { icon: <Mail size={18} />, text: 'subithasubi489@gmail.com' },
+//             { icon: <MapPin size={18} />, text: 'Nagercoil' },
+//           ].map((item, index) => (
+//             <div key={index} className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+//               {item.icon}
+//               <span>{item.text}</span>
+//             </div>
+//           ))}
+//         </div>
+
+//         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in delay-500">
+//           <button
+//             onClick={() => scrollToSection('contact')}
+//             className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+//           >
+//             Get In Touch
+//           </button>
+//           <a
+//   href="/resume.pdf"
+//   download
+//   className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400/10 hover:text-cyan-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+// >
+//   <Download size={18} />
+//   <span>Download Resume</span>
+// </a>
+
+//         </div>
+
+//         <button
+//           onClick={() => scrollToSection('about')}
+//           className="animate-bounce text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+//         >
+//           <ArrowDown size={32} />
+//         </button>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
 import React from 'react';
 import { ArrowDown, Download, Mail, Phone, MapPin } from 'lucide-react';
+import resumePDF from "../../dist/assets/CV.pdf";
 
 const Hero: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
@@ -169,7 +246,10 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden">
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden"
+    >
       <div className="absolute inset-0">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -179,13 +259,13 @@ const Hero: React.FC = () => {
         <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 mb-4 tracking-tight">
           SUBITHA.T
         </h1>
-        
+
         <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-200">
           Full Stack Developer (MERN)
         </p>
 
         <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in delay-300">
-          Passionate about crafting innovative solutions with over a year of experience 
+          Passionate about crafting innovative solutions with over a year of experience
           delivering high-quality web applications using modern technologies.
         </p>
 
@@ -195,7 +275,10 @@ const Hero: React.FC = () => {
             { icon: <Mail size={18} />, text: 'subithasubi489@gmail.com' },
             { icon: <MapPin size={18} />, text: 'Nagercoil' },
           ].map((item, index) => (
-            <div key={index} className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-300">
+            <div
+              key={index}
+              className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+            >
               {item.icon}
               <span>{item.text}</span>
             </div>
@@ -209,10 +292,15 @@ const Hero: React.FC = () => {
           >
             Get In Touch
           </button>
-          <button className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400/10 hover:text-cyan-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
+
+          <a
+           href={resumePDF} 
+            download
+            className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400/10 hover:text-cyan-300 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+          >
             <Download size={18} />
             <span>Download Resume</span>
-          </button>
+          </a>
         </div>
 
         <button

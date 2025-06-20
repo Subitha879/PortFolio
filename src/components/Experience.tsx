@@ -154,7 +154,7 @@ const Experience: React.FC = () => {
     },
     {
       title: "Full Stack Developer",
-      company: "Aroganam Tech",
+      company: "Aroganam Technologies",
       location: "Bengaluru",
       period: "OCT 2024 - MAR 2025",
       current: false
